@@ -1,24 +1,50 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/nexa/navbar";
+import { Hero } from "@/components/nexa/hero";
+import { SocialProof } from "@/components/nexa/social-proof";
+import { Features } from "@/components/nexa/features";
+import { Testimonials } from "@/components/nexa/testimonials";
+import { Pricing } from "@/components/nexa/pricing";
+import { Faq } from "@/components/nexa/faq";
+import { Cta } from "@/components/nexa/cta";
+import { SiteFooter } from "@/components/nexa/site-footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Nexa — Control de presentismo con GPS y PIN";
+const description =
+  "Nexa permite a tus empleados fichar desde su celular mediante GPS y PIN. Olvídate del hardware y automatiza el control de tus sucursales.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="flex min-h-screen flex-col bg-slate-50">
+      <Navbar />
+      <main className="flex-1">
+        <div className="bg-gradient-to-b from-slate-50 to-white">
+          <Hero />
+        </div>
+        <SocialProof />
+        <div className="bg-gradient-to-b from-white to-slate-50">
+          <Features />
+        </div>
+        <Testimonials />
+        <Pricing />
+        <Faq />
+        <Cta />
+      </main>
+      <SiteFooter />
     </div>
   );
 }
