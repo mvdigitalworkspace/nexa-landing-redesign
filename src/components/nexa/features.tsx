@@ -74,12 +74,12 @@ export function Features() {
               </div>
 
               <div className={reversed ? "md:order-1" : ""}>
-                <div className="aspect-video overflow-hidden rounded-2xl border border-orange-100 bg-white p-2 shadow-lg shadow-orange-900/5 ring-1 ring-orange-900/5">
+                <div className="relative aspect-video overflow-hidden rounded-2xl border border-orange-100 bg-orange-50/50 p-3 shadow-lg shadow-orange-900/5 ring-1 ring-orange-900/5">
                   <img
                     src={feature.image}
                     alt={feature.title}
                     loading="lazy"
-                    className="h-full w-full rounded-xl object-cover"
+                    className="h-full w-full rounded-xl object-contain"
                   />
                 </div>
               </div>

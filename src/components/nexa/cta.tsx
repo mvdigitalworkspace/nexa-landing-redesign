@@ -1,7 +1,7 @@
 export function Cta() {
   return (
     <section className="px-4 pb-16 md:pb-24">
-      <div className="mx-auto max-w-4xl rounded-3xl bg-slate-900 px-6 py-12 text-center shadow-2xl md:px-12 md:py-14">
+      <div className="mx-auto max-w-4xl rounded-3xl bg-gray-900 px-6 py-12 text-center shadow-2xl md:px-12 md:py-14">
         <h2 className="text-balance text-2xl font-bold tracking-tight text-white md:text-3xl">
           Empieza a gestionar tu franquicia de forma inteligente.
         </h2>

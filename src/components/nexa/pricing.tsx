@@ -59,6 +59,9 @@ export function Pricing() {
           Elegí el plan que mejor se adapta a tu negocio. Todos incluyen prueba
           gratis.
         </p>
+        <div className="mt-6 inline-flex items-center rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold text-orange-700 shadow-sm ring-1 ring-orange-200">
+          7 días de prueba gratis para todos los planes
+        </div>
       </div>
 
       <div className="mt-12 grid grid-cols-1 items-start gap-6 md:grid-cols-3">
@@ -71,10 +74,6 @@ export function Pricing() {
                 : "border border-slate-200"
             }`}
           >
-            <span className="inline-flex w-fit items-center rounded-full bg-orange-100 px-3 py-1 text-sm font-medium text-orange-600">
-              🎁 7 días de prueba gratis
-            </span>
-
             <h3 className="mt-5 text-xl font-bold text-slate-900">
               {plan.title}
             </h3>

@@ -29,14 +29,14 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="flex min-h-screen flex-col bg-slate-50">
+    <div className="flex min-h-screen flex-col bg-gray-50">
       <Navbar />
       <main className="flex-1">
-        <div className="bg-gradient-to-b from-slate-50 to-white">
+        <div className="bg-gradient-to-b from-gray-50 to-white">
           <Hero />
         </div>
         <SocialProof />
-        <div className="bg-gradient-to-b from-white to-slate-50">
+        <div className="bg-gradient-to-b from-white to-gray-50">
           <Features />
         </div>
         <Testimonials />
