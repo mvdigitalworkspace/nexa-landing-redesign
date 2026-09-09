@@ -1,4 +1,7 @@
 import { MapPin, Lock, Clock, type LucideIcon } from "lucide-react";
+import gpsAsset from "@/assets/GPS.png.asset.json";
+import pinAsset from "@/assets/PIN.png.asset.json";
+import horarioAsset from "@/assets/HORARIO.png.asset.json";
 
 type Feature = {
   icon: LucideIcon;
@@ -15,8 +18,7 @@ const features: Feature[] = [
     title: "Fichaje Geofence",
     description:
       "Valida por GPS que cada empleado esté físicamente en la sucursal al momento de fichar. Se acabaron los fichajes desde casa: el radio permitido lo defines tú.",
-    image:
-      "https://github.com/mvdigitalworkspace/NEXA-IMAGENES/blob/main/GPS.png?raw=true",
+    image: gpsAsset.url,
   },
   {
     icon: Lock,
@@ -24,8 +26,7 @@ const features: Feature[] = [
     title: "Seguridad por PIN",
     description:
       "Cada empleado usa un código único e intransferible. Evita suplantaciones y garantiza que quien ficha es realmente la persona correcta.",
-    image:
-      "https://github.com/mvdigitalworkspace/NEXA-IMAGENES/blob/main/PIN.png?raw=true",
+    image: pinAsset.url,
   },
   {
     icon: Clock,
@@ -33,8 +34,7 @@ const features: Feature[] = [
     title: "Cierres Automáticos",
     description:
       "Nexa audita los turnos a las 23:59 y cierra automáticamente los que quedaron abiertos. Nunca más una jornada mal registrada por un olvido.",
-    image:
-      "https://github.com/mvdigitalworkspace/NEXA-IMAGENES/blob/main/HORARIO.png?raw=true",
+    image: horarioAsset.url,
   },
 ];
 
@@ -74,12 +74,12 @@ export function Features() {
               </div>
 
               <div className={reversed ? "md:order-1" : ""}>
-                <div className="aspect-video overflow-hidden rounded-2xl">
+                <div className="aspect-video overflow-hidden rounded-2xl border border-orange-100 bg-white p-2 shadow-lg shadow-orange-900/5 ring-1 ring-orange-900/5">
                   <img
                     src={feature.image}
                     alt={feature.title}
                     loading="lazy"
-                    className="w-full h-full object-cover rounded-2xl shadow-sm"
+                    className="h-full w-full rounded-xl object-cover"
                   />
                 </div>
               </div>
