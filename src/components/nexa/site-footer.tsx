@@ -48,7 +48,7 @@ const socials = [
 
 export function SiteFooter() {
   return (
-    <footer className="bg-slate-900 text-slate-300">
+    <footer className="bg-gray-900 text-slate-300">
       <div className="mx-auto max-w-6xl px-6 py-14">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
@@ -102,7 +102,7 @@ export function SiteFooter() {
                   key={social.label}
                   href="#"
                   aria-label={social.label}
-                  className="flex size-10 items-center justify-center rounded-lg bg-slate-800 text-slate-300 transition-colors hover:bg-orange-600 hover:text-white"
+                  className="flex size-10 items-center justify-center rounded-lg bg-gray-800 text-slate-300 transition-colors hover:bg-orange-600 hover:text-white"
                 >
                   <social.icon className="size-5" aria-hidden="true" />
                 </a>
@@ -111,7 +111,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-slate-800 pt-8">
+        <div className="mt-12 border-t border-gray-800 pt-8">
           <p className="text-sm text-slate-500">
             © {new Date().getFullYear()} Nexa. Todos los derechos reservados.
           </p>
